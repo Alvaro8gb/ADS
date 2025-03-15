@@ -1,1 +1,28 @@
+class Instructors:
+    def __init__(self,name,surname,phone):
+        self.name= name
+        self.surname = surname 
+        self.phone = phone
+  
+class Students:
+    def __init__(self, name,surname,phone,score):
+        self.name = name
+        self.surname = surname
+        self.phone = phone
+        self.score = 0
+        self.instructor = None
+
+
+class Driving_school :
+    def __init__(self):
+        self.students = {}
+        self.instructors = {}
+
+    def alta(self, A, P, surname_A, phone_A, surname_P, phone_P):
+        if P not in self.instructors:
+            self.instructors[P] = instructors(P, surname_P, phone_P)
+        if A not in self.driving_school:
+            self.driving_school[A] = {'surname': surname_A, 'phone': phone_A, 'instructor': P, 'score': 0}
+        if A in self.driving_school:
+            
 
