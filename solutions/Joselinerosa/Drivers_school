@@ -1,28 +1,56 @@
-class Instructors:
-    def __init__(self,name,surname,phone):
-        self.name= name
-        self.surname = surname 
-        self.phone = phone
-  
 class Students:
-    def __init__(self, name,surname,phone,score):
+    def __init__(self, name,surname="",phone= ""):
         self.name = name
         self.surname = surname
         self.phone = phone
         self.score = 0
         self.instructor = None
+class Instructors:
+    def __init__(self,name,surname="",phone=""):
+        self.name= name
+        self.surname = surname 
+        self.phone = phone
+        self.studnets = set()
+  
 
 
 class Driving_school :
     def __init__(self):
-        self.students = {}
-        self.instructors = {}
+        self.students = {} 
+        self.instructors = {}# empty lists
 
-    def alta(self, A, P, surname_A, phone_A, surname_P, phone_P):
+    def alta(self, A, P, surname_A="", phone_A="", surname_P="", phone_P=""):
         if P not in self.instructors:
-            self.instructors[P] = instructors(P, surname_P, phone_P)
-        if A not in self.driving_school:
-            self.driving_school[A] = {'surname': surname_A, 'phone': phone_A, 'instructor': P, 'score': 0}
-        if A in self.driving_school:
+            self.instructors[P] = Instructors(P, surname_P, phone_P)
+        if A in self.students:
+            self.students[A].instructor = P
+
+    def es_alumno(self,A,P):
+        if A in self.students and self.students[A].instructor == P:
+            return f"{A} es alumno de {P}"
+        return f"{A} no es alumno de {P}"
+    
+    def puntuacion(self,A):
+        if A not in self.students:
+            return "ERROR"
+        return f"Puntuacion de {A}: {self.students[A].score}"
+    def actualizar(self, A, N):
+        if A not in self.students:
+            return "ERROR : El alumno {self.student[A]} no esta matriculado"
+        self.students[A].score += N
+    def examen(self, P, X):
+        if P not in self.instructors:
+            return "Error"
+        
+
+    def aprobar(self, A):
+        if A not in self.students:
+            return "ERROR"
+        
+        instructor = self.students[A].instructor
+        if instructor:
+            self.instructors[instructor].students.discard(A)
+        
+        del self.students[A]
             
 
