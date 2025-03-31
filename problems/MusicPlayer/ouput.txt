@@ -1,18 +1,11 @@
-Luis es alumno de Paco
-Marta no es alumno de Ramon
-Alumnos de Paco a examen:
-Luis
-Marta
-Alumnos de Paco a examen:
-Marta
-Alumnos de Juan a examen:
-Puntuacion de Marta: 10
-Alumnos de Juan a examen:
-Marta
-ERROR
-Alumnos de Juan a examen:
+Sonando BornToRun
+Tiempo total 392
+Sonando HumanTouch
+Sonando LuckyTown
+Las 2 mas recientes
+    LuckyTown
+    BornToRun
 ---
-ERROR
-Puntuacion de Alejandro: 20
-ERROR
+No hay canciones en la lista
+ERROR current
 ---
