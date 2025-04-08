@@ -1,23 +1,29 @@
-alta Luis Paco
-alta Marta Paco
-es_alumno Luis Paco
-es_alumno Marta Ramon
-examen Paco 0
-actualizar Marta 10
-examen Paco 10
-examen Juan 10
-alta Marta Juan
-puntuacion Marta
-actualizar Marta 10
-examen Juan 20
-actualizar Miguel 5
-aprobar Marta
-examen Juan 20
+addSong HumanTouch BruceSpringsteen 392
+addSong BornToRun BruceSpringsteen 270
+addSong BornToR43534 BruceSpringsteen 270
+addToPlaylist BornToRun
+addToPlaylist BornToRun
+totalTime
+addToPlaylist BornToR43534
+totalTime
+addToPlaylist BornToRun465678798
+totalTime
+addToPlaylist HumanTouch
+totalTime
+deleteSong BornToR43534
+play
+
+totalTime
+addSong LuckyTown BruceSpringsteen 207
+addToPlaylist LuckyTown
+play
+totalTime
+play
+totalTime
+deleteSong HumanTouch
+recent 2
+recent 10
 FIN
-puntuacion Alejandro
-alta Alejandro Isabel
-actualizar Alejandro 20
-puntuacion Alejandro
-aprobar Alejandro
-puntuacion Alejandro
+play
+current
 FIN
