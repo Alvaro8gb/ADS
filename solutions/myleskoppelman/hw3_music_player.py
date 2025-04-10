@@ -55,15 +55,16 @@ class IPud:
             return None
         if n < 1:
             raise ValueError
-        songs = set()
-        for i in range(1, n +1): #O(n)
-            if i == len(self.recents) + 1: # Makes sure you dont deque more elements than in stack
-                return songs
-            song = self.recents[-i]
-            if song in songs: # O(1)
-                continue
-            songs.add(song)
-            i += 1
+        
+        songs = [None] * n
+        i = 0
+        idx = 1 
+        while i <= n-1 and idx <= len(self.recents):  
+            song = self.recents[-idx]  
+            if song not in songs and song in self.songs:  
+                songs[i] = song
+                i += 1  
+            idx += 1  
 
         return songs
         
@@ -72,8 +73,10 @@ class IPud:
             return
         if song in self.playlist_songs:
             self.playlist_songs.remove(song)
+            self.recents.remove(song)
             self.total_time -= self.songs[song]['duration']   
         del self.songs[song]
+
         return
 
         
@@ -107,7 +110,8 @@ def process_operations(operations):
                 else:
                     output.append(f"Las {n} mas recientes")
                     for song in recents:
-                        output.append(f"    {song}")
+                        if song is not None:
+                            output.append(f"    {song}")
             elif command == "deleteSong":
                 ipud.deleteSong(parts[1])
             elif command == "FIN":
