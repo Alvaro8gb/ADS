@@ -59,11 +59,11 @@ This repository also is used for our collaborative work and assignments for the 
        ```
      - Checkout the local master branch of your fork:
        ```bash
-       git checkout master
+       git checkout main
        ```
      - Merge changes from the upstream into your master branch:
        ```bash
-       git merge upstream/master
+       git merge upstream/main
        ```
 
 ### Making Changes
@@ -78,7 +78,7 @@ This repository also is used for our collaborative work and assignments for the 
      ```
    - Push your changes to your online repository:
      ```bash
-     git push origin master
+     git push origin main
      ```
 
 5. **Create a Pull Request:**
