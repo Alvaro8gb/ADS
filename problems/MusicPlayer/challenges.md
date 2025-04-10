@@ -1,7 +1,7 @@
 
 # Challenges to adjust requirements
 
-In python is not possible to perfomr the delete operation from the IPud in a constant time O(1). As I take this exercise from C++ where this operation can be optimized. In this page is explained why. 
+In Python it is not possible to perform the delete operation from the IPud in constant time O(1). As I take this exercise from C++ where this operation can be optimised. This page explains why.
 
  **Python's memory model** and **C++'s memory model** are different.
 - `deque`** (or list) that allows element access by **pointer (iterator)** rather than by **index** in C++ enable access to element with random acess. 
@@ -59,7 +59,7 @@ Python's iterator **returns the value**, not a reference to a container position
 | Feature                     | C++                             | Python                                |
 |----------------------------|----------------------------------|----------------------------------------|
 | Raw memory access          | Yes (`&`, `*`, pointer arithmetic) | No                                     |
-| References to container slots | Yes (`iterator` is like a pointer) | No, `iterator` just yields values     |
+| References to ADS slots | Yes (`iterator` is like a pointer) | No, `iterator` just yields values     |
 | Control over layout        | Yes (`std::deque`, `std::vector`) | No, memory layout abstracted          |
 | Pointer-based element access | Yes                             | No                                     |
 
